@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  backend1:
+    build: .
+    ports:
+      - 5000
+  backend2:
+    build: .
+    ports:
+      - 5000
+  backend3:
+    build: .
+    ports:
+      - 5000
+  load-balancer:
+    build: nginx/
+    ports:
+      - '80:80'
+    links:
+      - backend1
+      - backend2
+      - backend3
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
