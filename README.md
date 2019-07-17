@@ -3,6 +3,10 @@
 # inventory-backend
 
 ## Installation
+
+### Requirements:
+Docker must be installed on your machine
+
 - Clone the repo locally
 
   ```bash
@@ -20,9 +24,10 @@
   
 
 - Build the docker container (may take some time, make sure you have an Internet connection):
-```bash
-sudo docker build -t inventory-backend .
-```
+
+  ```bash
+  sudo docker build -t inventory-backend .
+  ```
 
 - Run the container
 
